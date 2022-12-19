@@ -110,9 +110,9 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" type="text/css" href="./css/style_form.css" />
-  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="./css/encuestas.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/encuestas.css" />
 </svelte:head>
 <div class="">
   <!-- main -->
@@ -123,7 +123,7 @@
       </div>
 
       <div class="user">
-        <img src="./imgs/login-icon.png" alt="" />
+        <img src="/svelte-swpit/imgs/login-icon.png" alt="" />
       </div>
     </div>
     <!-- cards -->

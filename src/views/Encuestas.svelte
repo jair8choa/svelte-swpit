@@ -13,8 +13,8 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" type="text/css" href="./css/style_home.css" />
-  <link rel="stylesheet" type="text/css" href="./css/style_form.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_home.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
 
 </svelte:head>
 
@@ -26,7 +26,7 @@
       </div>
 
       <div class="user">
-        <img src="./imgs/login-icon.png" alt="" />
+        <img src="/svelte-swpit/imgs/login-icon.png" alt="" />
       </div>
     </div>
 
