@@ -22,7 +22,7 @@
         body: formData,
       };
 
-      fetch("http://localhost:5000/auth/login", options)
+      fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/auth/login", options)
         .then((response) => response.text())
         .then((data) => {
           let token = JSON.parse(data);

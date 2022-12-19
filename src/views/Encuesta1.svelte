@@ -28,7 +28,7 @@
         Accept: "*/*",
       },
     };
-    const res = await fetch("http://localhost:5000/encuesta/1", options);
+    const res = await fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/1", options);
     const json = await res.json();
     secciones = json.secciones
     return json;

@@ -18,7 +18,7 @@ const enviar = (respuestas, token, id_encuesta) => {
     body: JSON.stringify(body),
   };
 
-  fetch("http://localhost:5000/encuesta/resultados", options)
+  fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados", options)
     .then((response) => response.text())
     .then((data) => {
       navigate("/resultados"+id_encuesta, { replace: true });

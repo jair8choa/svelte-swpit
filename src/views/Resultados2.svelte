@@ -27,7 +27,7 @@
     };
 
     const res = await fetch(
-      "http://127.0.0.1:5000/encuesta/resultados/2",
+      "https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados/2",
       options
     );
     const data = await res.json();

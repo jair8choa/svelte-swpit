@@ -12,10 +12,12 @@
   import {onMount} from 'svelte'
   import {user} from './stores/User'
 
-    onMount(()=>{
-		  console.log($user)
-      if($user) user.setUser($user)
-    })
+  onMount(()=>{
+    navigate('/', {replace: true})
+  })
+
+
+
 </script>
 
 <Router>
