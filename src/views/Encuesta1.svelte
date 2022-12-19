@@ -65,7 +65,7 @@
         <p>...waiting</p>
       {:then data}
         <div class="d-flex justify-content-center text-muted">
-          <h1>{data.titulo}</h1>
+          <h1 class="text-center">{data.titulo}</h1>
         </div>
         {#each secciones as seccion, s}
           <div class="d-flex justify-content-start p-3 text-muted">

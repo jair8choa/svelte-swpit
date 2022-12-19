@@ -33,6 +33,9 @@
           navigate('/home', {replace: true})
         })
         .catch((error) => {
+          alert("Contraseña o Usuario Incorrecto")
+          username = ""
+          password = ""
           console.error(error);
         });
     };

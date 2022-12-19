@@ -4,7 +4,7 @@
   import { user } from "../stores/User";
 
   const cerrarsesion = () => {
-    if (confirm("Press a button!")) {
+    if (confirm("Deseas cerrar sesion")) {
       localStorage.clear()
       navigate('/', {replace: true})
     }
