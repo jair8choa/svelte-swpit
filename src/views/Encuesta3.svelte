@@ -13,10 +13,10 @@
   let token = ""
 
   onMount(() => {
-    let token = localStorage.getItem('token')
+    token = localStorage.getItem('token')
 		let user_id = localStorage.getItem('user_id')
     if(!token && !user_id) navigate('/', {replace: true})
-    token = localStorage.getItem('token')
+    console.log(token)
     promise = getPreguntas();
   });
 
@@ -35,8 +35,9 @@
 
   const calificar = () => {
     let res = respuestas[0].filter((i) => i != "");
+    console.log(token)
     if (res.length >= 24) {
-      enviar(respuestas, token, 3);
+      enviar(respuestas,token, 3)
     } else {
       alert("Contesta todas las pregunas!");
     }

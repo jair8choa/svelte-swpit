@@ -14,10 +14,12 @@ const enviar = (respuestas, token, id_encuesta) => {
     method: "POST",
     headers: {
       Authorization: token,
+      Accept: "*/*",
     },
     body: JSON.stringify(body),
   };
 
+  // fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados", options)
   fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados", options)
     .then((response) => response.text())
     .then((data) => {

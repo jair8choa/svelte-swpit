@@ -12,7 +12,7 @@
   let token = ""
 
   onMount(() => {
-    let token = localStorage.getItem('token')
+    token = localStorage.getItem('token')
 		let user_id = localStorage.getItem('user_id')
     if(!token && !user_id) navigate('/', {replace: true})
     token = localStorage.getItem('token')

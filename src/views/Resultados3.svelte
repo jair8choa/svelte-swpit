@@ -29,6 +29,7 @@
 
     const res = await fetch(
       "https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados/3",
+      // "https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados/3",
       options
     );
     const data = await res.json();
