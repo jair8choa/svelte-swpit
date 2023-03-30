@@ -1,6 +1,6 @@
 import { Router, Link, Route, navigate } from "svelte-routing";
-
-const enviar = (respuestas, token, id_encuesta) => {
+import { getCSRFToken } from "./cookies";
+const enviar = (respuestas, csrf, id_encuesta) => {
   respuestas = respuestas.map((element) => {
     return element.filter((i) => i != "" && i != null);
   });
@@ -10,17 +10,21 @@ const enviar = (respuestas, token, id_encuesta) => {
     id_encuesta,
   };
 
+
   const options = {
     method: "POST",
     headers: {
-      Authorization: token,
       Accept: "*/*",
+      XCSRFTOKEN: csrf,
     },
     body: JSON.stringify(body),
+    credentials: 'include',
   };
 
+  console.log(options)
+
   // fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados", options)
-  fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados", options)
+  fetch("http://localhost:5050/encuesta/resultados", options)
     .then((response) => response.text())
     .then((data) => {
       navigate("/resultados"+id_encuesta, { replace: true });
@@ -30,10 +34,5 @@ const enviar = (respuestas, token, id_encuesta) => {
     });
 };
 
-const terminarSesion = ()=>{
-  alert("Tu sesion ha terminado, inicia sesion de nuevo")
-  localStorage.clear()
-  navigate('/', {replace: true})
-}
 
-export { enviar, terminarSesion};
+export { enviar };

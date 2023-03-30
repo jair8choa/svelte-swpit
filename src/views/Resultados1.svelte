@@ -1,10 +1,9 @@
 <script>
   import { onMount } from "svelte";
   import { Doughnut, Pie } from "svelte-chartjs";
-  import { user } from "../stores/User";
   import Navbar from "../components/Navbar.svelte";
   import { navigate } from "svelte-routing";
-  import {terminarSesion} from '../utils/enviar'
+
   import {
     Chart as ChartJS,
     Title,
@@ -28,7 +27,7 @@
     };
 
     const res = await fetch(
-      "https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados/1",
+      "http://localhost:5050/encuesta/resultados/1",
       options
     );
     const data = await res.json();
@@ -102,9 +101,6 @@
   };
 
   onMount(() => {
-    let token = localStorage.getItem('token')
-		let user_id = localStorage.getItem('user_id')
-    if(!token && !user_id) navigate('/', {replace: true})
     promise = getResultados();
   });
 </script>
@@ -142,7 +138,6 @@
             <h3>Tus habilidades de estudio son {resultado}</h3>
           </div>
       {:catch error}
-        {console.log(error)}
         <p class="text-center text-danger">Aun no realizado la encuesta</p>
       {/await}
     </div>

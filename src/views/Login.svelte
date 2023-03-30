@@ -1,18 +1,15 @@
 <script>
     import { Router, Link, Route, navigate } from "svelte-routing";
     import {onMount} from 'svelte'
-    import { user } from "../stores/User";
+    import { user } from "../stores/Store.js";
     let username;
     let password;
 
     onMount(()=>{
-      let token = localStorage.getItem('token')
-		  let user_id = localStorage.getItem('user_id')
-      if(!token && !user_id) navigate('/', {replace: true})
-      else navigate('/home', {replace: true})
+      if($user) navigate('/home', {replace: true})
     })
 
-    const login = () => {
+    const login = async () => {
       const formData = new FormData();
       formData.append("username", username);
       formData.append("password", password);
@@ -20,24 +17,21 @@
       const options = {
         method: "POST",
         body: formData,
+        credentials: "include",
       };
 
-      fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/auth/login", options)
-        .then((response) => response.text())
-        .then((data) => {
-          let token = JSON.parse(data);
-          user.setUser(token)
-          console.log(token)
-          localStorage.setItem('token', token.token)
-          localStorage.setItem('user_id', token.user_id)
-          navigate('/home', {replace: true})
-        })
-        .catch((error) => {
-          alert("Contraseña o Usuario Incorrecto")
-          username = ""
-          password = ""
-          console.error(error);
-        });
+      const response = await fetch("http://localhost:5050/auth/login", options)
+      const data = await response.json()
+      const status = await response.status
+      if(status == 200){
+        user.login(data)
+        navigate('/home', {replace: true})
+      }else{
+        alert("Contraseña o Usuario Incorrecto")
+        username = ""
+        password = ""
+      }
+
     };
   </script>
 

@@ -1,9 +1,9 @@
 <script>
   import { onMount } from "svelte";
   import { Doughnut, Pie } from "svelte-chartjs";
-  import { user } from "../stores/User";
   import Navbar from "../components/Navbar.svelte";
   import {navigate} from 'svelte-routing'
+
 
   import {
     Chart as ChartJS,
@@ -13,7 +13,6 @@
     ArcElement,
     CategoryScale,
   } from "chart.js";
-  import { terminarSesion } from "../utils/enviar";
 
   ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
 
@@ -28,7 +27,7 @@
     };
 
     const res = await fetch(
-      "https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados/3",
+      "http://localhost:5050/encuesta/resultados/3",
       // "https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados/3",
       options
     );
@@ -44,9 +43,6 @@
   };
 
   onMount(() => {
-    let token = localStorage.getItem('token')
-		let user_id = localStorage.getItem('user_id')
-    if(!token && !user_id) navigate('/', {replace: true})
     promise = getResultados();
   });
 </script>

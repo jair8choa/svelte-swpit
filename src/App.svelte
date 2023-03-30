@@ -10,10 +10,18 @@
   import Resultados3 from "./views/Resultados3.svelte";
   import Resultados2 from "./views/Resultados2.svelte";
   import {onMount} from 'svelte'
-  import {user} from './stores/User'
-
-  onMount(()=>{
-    navigate('/', {replace: true})
+  import { user } from "./stores/Store.js";
+  
+  onMount(async()=>{
+      const response = await fetch('http://localhost:5050/auth/check', {method: 'GET', credentials: "include"})
+      const status = await response.status
+      const data = await response.json();
+      if(status == 200){
+        user.login(data)
+        navigate('/home', {replace: true})
+      }else{
+        navigate('/', {replace: true})
+      } 
   })
 
 

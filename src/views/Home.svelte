@@ -1,13 +1,12 @@
 <script>
 	import { Router, Link, Route, navigate } from "svelte-routing";
-    import {user} from '../stores/User'
 	import Navbar from "../components/Navbar.svelte";
     import {onMount} from 'svelte'
+	import { user } from "../stores/Store";
 
     onMount(()=>{
-		let token = localStorage.getItem('token')
-		let user_id = localStorage.getItem('user_id')
-      	if(!token && !user_id) navigate('/', {replace: true})
+		console.log($user)
+		if(!$user) navigate('/', {replace: true})
     })
 
 </script>

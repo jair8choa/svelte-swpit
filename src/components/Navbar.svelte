@@ -1,11 +1,12 @@
-<script>
+<script lang="js">
   import { Router, Link, Route, navigate } from "svelte-routing";
   import { onMount } from "svelte";
-  import { user } from "../stores/User";
+  import { user } from "../stores/Store.js";
 
-  const cerrarsesion = () => {
+  const cerrarsesion = async () => {
     if (confirm("Deseas cerrar sesion")) {
-      localStorage.clear()
+      const response = await fetch('http://localhost:5050/auth/logout',  {method: 'POST', credentials:'include'})
+      user.logout()
       navigate('/', {replace: true})
     }
   };

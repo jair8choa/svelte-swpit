@@ -1,10 +1,10 @@
 <script>
-  import { user } from "../stores/User";
   import { fade } from "svelte/transition";
   import { onMount } from "svelte";
   import Navbar from "../components/Navbar.svelte";
   import { enviar } from "../utils/enviar";
   import { navigate } from "svelte-routing";
+  import { user } from "../stores/Store";
 
 
   let promise = {};
@@ -13,11 +13,7 @@
   let token = ""
 
   onMount(() => {
-    // if (!$user) navigate("/", { replace: true });
-    token = localStorage.getItem('token')
-		let user_id = localStorage.getItem('user_id')
-    if(!token && !user_id) navigate('/', {replace: true})
-    token = localStorage.getItem('token')
+    if(!$user) navigate('/', {replace: true})
     promise = getPreguntas();
   });
 
@@ -28,16 +24,16 @@
         Accept: "*/*",
       },
     };
-    const res = await fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/2", options);
+    const res = await fetch("http://localhost:5050/encuesta/2", options);
     const json = await res.json();
-    secciones = json.secciones;
+    secciones = json.Secciones;
     return json;
   };
 
   const calificar = () => {
     let res = respuestas[0].filter(i=> i!='')
     if(res.length >= 9){
-      enviar(respuestas, token, 2)
+      enviar(respuestas, $user.csrf, 2)
     }else{
       alert("Contesta todas las pregunas!")
     }
@@ -65,17 +61,17 @@
       <p>...waiting</p>
     {:then data}
       <div class="d-flex justify-content-center text-muted">
-        <h1 class="text-center">{data.titulo}</h1>
+        <h1 class="text-center">{data.Nombre}</h1>
       </div>
       {#each secciones as seccion, s}
         <div class="d-flex justify-content-start p-3 text-muted">
-          <h2>{seccion.titulo}</h2>
+          <h2>{seccion.Titulo}</h2>
         </div>
 
         <div class="cardBox" transition:fade>
-          {#each seccion.preguntas as pregunta, i}
+          {#each seccion.Preguntas as pregunta, i}
             <div class="  card">
-              <label class="cardName">{pregunta.titulo}</label>
+              <label class="cardName">{pregunta.TituloPregunta}</label>
               <br />
               <div>
                 <div class="mb-3">

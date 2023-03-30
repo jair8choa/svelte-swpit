@@ -1,0 +1,334 @@
+{
+    "Nombre": "ENCUESTA SOBRE LAS HABILIDADES DE ESTUDIO",
+    "Instrucciones": "No hay respuestas 'correctas' o 'incorrecta', ya que la contestación adecuada es tu juicio sincero sobre tu modo de actuar y tus actitudes personales, respecto al estudio. Responde tan rápido como puedas, Pero sin caer en el descuido, y no dediques demasiado tiempo a una sola pregunta. No omitas ninguna de ellas.",
+    "idEncuesta": 1,
+    "Observaciones": "Contestar con una X",
+    "Descripcion": "Esta es una encuesta sobre las habilidades de estudio",
+    "EstadoEncuesta": 1,
+    "Secciones": [
+        {
+            "Titulo": "ENCUESTA PARA LA ORGANIZACION DEL ESTUDIO",
+            "Preguntas": [
+                {
+                    "NumeroPregunta": 1,
+                    "TituloPregunta": "¿Sueles dejar para el último la preparación de tus trabajos?",
+                    "idPregunta": 1
+                },
+                {
+                    "NumeroPregunta": 2,
+                    "TituloPregunta": "¿Crees que el sueño o el cansancio te impidan estudiar eficazmente en muchas ocasiones?",
+                    "idPregunta": 2
+                },
+                {
+                    "NumeroPregunta": 3,
+                    "TituloPregunta": "¿Es frecuente que no termines tu tarea a tiempo?",
+                    "idPregunta": 3
+                },
+                {
+                    "NumeroPregunta": 4,
+                    "TituloPregunta": "¿Tiendes a emplear tiempo en leer revistas, ver televisión o charlar cuando debieras dedicarlos a estudiar?",
+                    "idPregunta": 4
+                },
+                {
+                    "NumeroPregunta": 5,
+                    "TituloPregunta": "Tus actividades  sociales o deportivas. ¿te llevan a descuidar, a menudo, tus tareas escolares?",
+                    "idPregunta": 5
+                },
+                {
+                    "NumeroPregunta": 6,
+                    "TituloPregunta": "¿Sueles dejar pasar un día o más antes de repasarlos apuntes tomados en clase?",
+                    "idPregunta": 6
+                },
+                {
+                    "NumeroPregunta": 7,
+                    "TituloPregunta": "¿Sueles dedicar tu tiempo libre entre las 4:00 de la tarde y las 9:00 de la noche a otras actividades que no sean estudiar?",
+                    "idPregunta": 7
+                },
+                {
+                    "NumeroPregunta": 8,
+                    "TituloPregunta": "¿Descubres algunas veces de pronto, que debes entregar una tarea antes de lo que creías?",
+                    "idPregunta": 8
+                },
+                {
+                    "NumeroPregunta": 9,
+                    "TituloPregunta": "¿Te retrasas, con frecuencia, en una asignatura debido a que tienes que estudiar otra?",
+                    "idPregunta": 9
+                },
+                {
+                    "NumeroPregunta": 10,
+                    "TituloPregunta": "¿Te parece que tu rendimiento es muy bajo, en relación con el tiempo que dedicas al estudio?",
+                    "idPregunta": 10
+                },
+                {
+                    "NumeroPregunta": 11,
+                    "TituloPregunta": "¿Está situado tu escritorio directamente frente a una ventana, puerta u otra fuente de distracción?",
+                    "idPregunta": 11
+                },
+                {
+                    "NumeroPregunta": 12,
+                    "TituloPregunta": "¿Sueles tener fotografías, trofeos o recuerdos sobre tu mesa de escritorio?",
+                    "idPregunta": 12
+                },
+                {
+                    "NumeroPregunta": 13,
+                    "TituloPregunta": "¿Sueles estudiar recostado en la cama o arrellanado en un asiento cómodo?",
+                    "idPregunta": 13
+                },
+                {
+                    "NumeroPregunta": 14,
+                    "TituloPregunta": "¿Produce resplandor la lámpara que utilizas al estudiar?",
+                    "idPregunta": 14
+                },
+                {
+                    "NumeroPregunta": 15,
+                    "TituloPregunta": "Tu mesa de estudio ¿está tan desordenada y llena de objetos, que no dispones de sitio suficiente para estudiar con eficacia?",
+                    "idPregunta": 15
+                },
+                {
+                    "NumeroPregunta": 16,
+                    "TituloPregunta": "¿Sueles interrumpir tu estudio, por personas que vienen a visitarte?",
+                    "idPregunta": 16
+                },
+                {
+                    "NumeroPregunta": 17,
+                    "TituloPregunta": "¿Estudias, con frecuencia, mientras tienes puesta la televisión y/o la radio?",
+                    "idPregunta": 17
+                },
+                {
+                    "NumeroPregunta": 18,
+                    "TituloPregunta": "En el lugar donde estudias, ¿se pueden ver con facilidad revistas, fotos de jóvenes o  materiales pertenecientes a tu afición?",
+                    "idPregunta": 18
+                },
+                {
+                    "NumeroPregunta": 19,
+                    "TituloPregunta": "¿Con frecuencia, interrumpen tu estudio, actividades o ruidos que provienen del exterior?",
+                    "idPregunta": 19
+                },
+                {
+                    "NumeroPregunta": 20,
+                    "TituloPregunta": "¿Suele hacerse lento tu estudio debido a que no tienes a la mano los libros y los materiales necesarios?",
+                    "idPregunta": 20
+                }
+            ],
+            "Instrucciones": "",
+            "idSeccion": 1,
+            "idEncuesta": 1
+        },
+        {
+            "Titulo": "ENCUESTA TECNICA DE ESTUDIO",
+            "Preguntas": [
+                {
+                    "NumeroPregunta": 1,
+                    "TituloPregunta": "¿Tiendes a comenzar la lectura de un libro de texto sin hojear previamente los subtítulos y las ilustraciones?",
+                    "idPregunta": 41
+                },
+                {
+                    "NumeroPregunta": 2,
+                    "TituloPregunta": "¿Te saltas por lo general las figuras, gráficas y tablas cuando estudias un tema?",
+                    "idPregunta": 42
+                },
+                {
+                    "NumeroPregunta": 3,
+                    "TituloPregunta": "C.- ¿Suelo serte difícil seleccionar los puntos de los temas de estudio?\t\t",
+                    "idPregunta": 43
+                },
+                {
+                    "NumeroPregunta": 4,
+                    "TituloPregunta": "¿Te sorprendes con cierta frecuencia, pensando en algo que no tiene nada que ver con lo que estudias?",
+                    "idPregunta": 44
+                },
+                {
+                    "NumeroPregunta": 5,
+                    "TituloPregunta": "¿Sueles tener dificultad en entender tus apuntes de clase cuando tratas de repasarlos, después de cierto tiempo?",
+                    "idPregunta": 45
+                },
+                {
+                    "NumeroPregunta": 6,
+                    "TituloPregunta": "Al tomar notas, ¿te sueles quedar atrás con frecuencia debido a que no puedes escribir con suficiente rapidez?",
+                    "idPregunta": 46
+                },
+                {
+                    "NumeroPregunta": 7,
+                    "TituloPregunta": "Poco después de comenzar un curso, ¿sueles encontrarte con tus apuntes formando un “revoltijo",
+                    "idPregunta": 47
+                },
+                {
+                    "NumeroPregunta": 8,
+                    "TituloPregunta": "¿Tomas normalmente tus apuntes tratando de escribir las palabras exactas del docente?",
+                    "idPregunta": 48
+                },
+                {
+                    "NumeroPregunta": 9,
+                    "TituloPregunta": "Cuando tomas notas de un libro, ¿tienes la costumbre de copiar el material necesario, palabra por Palabra?",
+                    "idPregunta": 49
+                },
+                {
+                    "NumeroPregunta": 10,
+                    "TituloPregunta": "¿Te es difícil preparar un temario apropiado para un evaluación?",
+                    "idPregunta": 50
+                },
+                {
+                    "NumeroPregunta": 11,
+                    "TituloPregunta": "¿Tienes problemas para organizar los datos o el contenido de una evaluación?",
+                    "idPregunta": 51
+                },
+                {
+                    "NumeroPregunta": 12,
+                    "TituloPregunta": "¿Al repasar el temario de una evaluación formulas un resumen de este?",
+                    "idPregunta": 52
+                },
+                {
+                    "NumeroPregunta": 13,
+                    "TituloPregunta": "¿Te preparas a veces para un evaluación memorizando fórmulas, definiciones o reglas que no entiendes con claridad?",
+                    "idPregunta": 53
+                },
+                {
+                    "NumeroPregunta": 14,
+                    "TituloPregunta": "¿Te resulta difícil decidir qué estudiar y cómo estudiarlo cuando preparas un evaluación?",
+                    "idPregunta": 54
+                },
+                {
+                    "NumeroPregunta": 15,
+                    "TituloPregunta": "¿Sueles tener dificultades para organizar, en un orden lógico, las asignaturas que debes estudiar por temas?",
+                    "idPregunta": 55
+                },
+                {
+                    "NumeroPregunta": 16,
+                    "TituloPregunta": "Al preparar evaluación, ¿sueles estudiar toda la asignatura, en el último momento?",
+                    "idPregunta": 56
+                },
+                {
+                    "NumeroPregunta": 17,
+                    "TituloPregunta": "¿Sueles entregar tus exámenes sin revisarlos detenidamente, para ver si tienen algún error cometido por descuido?",
+                    "idPregunta": 57
+                },
+                {
+                    "NumeroPregunta": 18,
+                    "TituloPregunta": "¿Te es posible con frecuencia terminar un evaluación de exposición de un tema en el tiempo prescrito?",
+                    "idPregunta": 58
+                },
+                {
+                    "NumeroPregunta": 19,
+                    "TituloPregunta": "¿Sueles perder puntos en exámenes con preguntas de “Verdadero falso debido a que no lees detenidamente?",
+                    "idPregunta": 59
+                },
+                {
+                    "NumeroPregunta": 20,
+                    "TituloPregunta": "¿Empleas normalmente mucho tiempo en contestar la primera mitad de la prueba y tienes que apresurarte en la segunda?",
+                    "idPregunta": 60
+                }
+            ],
+            "Instrucciones": "",
+            "idSeccion": 2,
+            "idEncuesta": 1
+        },
+        {
+            "Titulo": "ENCUESTA PARA MOTIVACION SOBRE MOTIVACION PARA EL ESTUDIO",
+            "Preguntas": [
+                {
+                    "NumeroPregunta": 1,
+                    "TituloPregunta": "Después de los primeros días o semanas del curso, ¿tiendes a perder interés por el estudio?",
+                    "idPregunta": 21
+                },
+                {
+                    "NumeroPregunta": 2,
+                    "TituloPregunta": "¿Crees que en general, basta estudiar lo necesario para obtener un 'aprobado' en las asignaturas?",
+                    "idPregunta": 22
+                },
+                {
+                    "NumeroPregunta": 3,
+                    "TituloPregunta": "¿Te sientes frecuentemente confuso o indeciso sobre cuáles deben ser tus metas formativas y profesionales?",
+                    "idPregunta": 23
+                },
+                {
+                    "NumeroPregunta": 4,
+                    "TituloPregunta": "¿Sueles pensar que no vale la pena el tiempo y el esfuerzo que son necesarios para lograr una educación universitaria?",
+                    "idPregunta": 24
+                },
+                {
+                    "NumeroPregunta": 5,
+                    "TituloPregunta": "¿Crees que es más importante divertirte y disfrutar de la vida, que estudiar?",
+                    "idPregunta": 25
+                },
+                {
+                    "NumeroPregunta": 6,
+                    "TituloPregunta": "¿Sueles pasar el tiempo de clase en divagaciones o soñando despierto en lugar de atender al docente?",
+                    "idPregunta": 26
+                },
+                {
+                    "NumeroPregunta": 7,
+                    "TituloPregunta": "¿Te sientes habitualmente incapaz de concentrarte en tus estudios debido a que estas inquieto, aburrido o de mal humor?",
+                    "idPregunta": 27
+                },
+                {
+                    "NumeroPregunta": 8,
+                    "TituloPregunta": "¿Piensas con frecuencia que las asignaturas que estudias tienen poco valor practico para ti?",
+                    "idPregunta": 28
+                },
+                {
+                    "NumeroPregunta": 9,
+                    "TituloPregunta": "¿Sientes, frecuentes deseos de abandonar la escuela y conseguir un trabajo?",
+                    "idPregunta": 29
+                },
+                {
+                    "NumeroPregunta": 10,
+                    "TituloPregunta": "¿Sueles tener la sensación de lo que se enseña en los centros docentes no te prepara para afrontar los problemas de la vida adulta?",
+                    "idPregunta": 30
+                },
+                {
+                    "NumeroPregunta": 11,
+                    "TituloPregunta": "¿Sueles dedicarte de modo casual, según el estado de ánimo en que te encuentres?",
+                    "idPregunta": 31
+                },
+                {
+                    "NumeroPregunta": 12,
+                    "TituloPregunta": "¿Te horroriza estudiar libros de textos porque son insípidos y aburridos?",
+                    "idPregunta": 32
+                },
+                {
+                    "NumeroPregunta": 13,
+                    "TituloPregunta": "¿Esperas normalmente a que te fijen la fecha de un evaluación para comenzar a estudiar los textos o repasar tus apuntes de clases?",
+                    "idPregunta": 33
+                },
+                {
+                    "NumeroPregunta": 14,
+                    "TituloPregunta": "¿Sueles pensar que los exámenes son pruebas penosas de las que no se puede escapar y respecto a las cuales lo que debe hacerse es sobrevivir, del modo que sea?",
+                    "idPregunta": 34
+                },
+                {
+                    "NumeroPregunta": 15,
+                    "TituloPregunta": "¿Sientes con frecuencia que tus docentes no comprenden las necesidades de los estudiantes?",
+                    "idPregunta": 35
+                },
+                {
+                    "NumeroPregunta": 16,
+                    "TituloPregunta": "¿Tienes normalmente la sensación de que tus docentes exigen demasiadas horas de estudio fuera de clase?",
+                    "idPregunta": 36
+                },
+                {
+                    "NumeroPregunta": 17,
+                    "TituloPregunta": "¿ Dudas por lo general, en pedir ayuda a tus docentes en tareas que te son difíciles?",
+                    "idPregunta": 37
+                },
+                {
+                    "NumeroPregunta": 18,
+                    "TituloPregunta": "¿Sueles pensar que tus docentes no tienen contacto con los temas y sucesos de actualidad?",
+                    "idPregunta": 38
+                },
+                {
+                    "NumeroPregunta": 19,
+                    "TituloPregunta": "¿Te sientes reacio, por lo general, a hablar con tus docentes de tus proyectos futuros, de estudio o profesionales?",
+                    "idPregunta": 39
+                },
+                {
+                    "NumeroPregunta": 20,
+                    "TituloPregunta": "¿Criticas con frecuencia a tus docentes cuando charlas con tus compañeros?",
+                    "idPregunta": 40
+                }
+            ],
+            "Instrucciones": "",
+            "idSeccion": 3,
+            "idEncuesta": 1
+        }
+    ]
+}
