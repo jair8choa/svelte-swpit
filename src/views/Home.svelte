@@ -31,7 +31,7 @@
 		<!-- cards -->
 		<div class="panel panel-default">
 			<div class="panel-body text-center">
-				¡Bienvenido a SWPIT!
+				¡Bienvenido a SWPIT, {$user.name}!
 				<br />
 				<br />
 				<br />

@@ -59,6 +59,26 @@
           <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
         </div>
       </Link>
+      <Link to="/encuesta4">
+        <div class="card">
+          <div>
+            <div class="numbers">4</div>
+            <div class="cardName">INVENTARIO SOBRE CANALES DE APRENDIZAJE</div>
+            <Link class="link-primary" to="resultados4" replace>Resultado</Link>
+          </div>
+          <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
+        </div>
+      </Link>
+      <Link to="/encuesta5">
+        <div class="card">
+          <div>
+            <div class="numbers">5</div>
+            <div class="cardName">INVENTARIO SOBRE CANALES DE APRENDIZAJE</div>
+            <Link class="link-primary" to="resultados4" replace>Resultado</Link>
+          </div>
+          <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
+        </div>
+      </Link>
     </div>
   </div>
   <Navbar></Navbar>

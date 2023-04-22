@@ -13,6 +13,7 @@
       const formData = new FormData();
       formData.append("username", username);
       formData.append("password", password);
+      formData.append("typeuser", 'student');
 
       const options = {
         method: "POST",

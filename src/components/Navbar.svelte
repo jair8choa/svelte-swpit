@@ -4,10 +4,10 @@
   import { user } from "../stores/Store.js";
 
   const cerrarsesion = async () => {
-    if (confirm("Deseas cerrar sesion")) {
+    if (confirm("Deseas cerrar sesion "+$user.name+"?")) {
       const response = await fetch('http://localhost:5050/auth/logout',  {method: 'POST', credentials:'include'})
       user.logout()
-      navigate('/', {replace: true})
+      navigate('/', {replace: false})
     }
   };
 
@@ -52,7 +52,7 @@
       </Link>
     </li>
     <li>
-      <a href="#" on:click={cerrarsesion}>
+      <a href="/" on:click={cerrarsesion}>
         <span class="icon"> <ion-icon name="log-out" /> </span>
         <span class="tittle">Cerrar Sesión</span>
       </a>
