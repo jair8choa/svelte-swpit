@@ -3,16 +3,11 @@
   import Home from "./views/Home.svelte";
   import Login from "./views/Login.svelte";
   import Encuestas from "./views/Encuestas.svelte";
-  import Resultados1 from "./views/Resultados1.svelte";
-  import Encuesta1 from "./views/Encuesta1.svelte";
-  import Encuesta2 from "./views/Encuesta2.svelte";
-  import Encuesta3 from "./views/Encuesta3.svelte";
-  import Encuesta4 from "./views/Encuesta4.svelte";
-  import Encuesta5 from "./views/Encuesta5.svelte";
-  import Resultados3 from "./views/Resultados3.svelte";
-  import Resultados2 from "./views/Resultados2.svelte";
+  import Encuesta from "./views/Encuesta.svelte";
+  import Resultados from "./views/Resultados.svelte";
   import {onMount} from 'svelte'
   import { user } from "./stores/Store.js";
+    import Resultados1 from "./views/Resultados1.svelte";
   
   onMount(async()=>{
       const response = await fetch('http://localhost:5050/auth/check', {method: 'GET', credentials: "include"})
@@ -40,28 +35,10 @@
   <Route path="/encuestas">
     <Encuestas />
   </Route>
-  <Route path="/encuesta1">
-    <Encuesta1 />
+  <Route path="/encuesta/:id" let:params>
+    <Encuesta encuestaId="{params.id}" />
   </Route>
-  <Route path="/resultados1">
-    <Resultados1 />
-  </Route>
-  <Route path="/encuesta2">
-    <Encuesta2 />
-  </Route>
-  <Route path="/resultados2">
-    <Resultados2 />
-  </Route>
-  <Route path="/encuesta3">
-    <Encuesta3 />
-  </Route>
-  <Route path="/resultados3">
-    <Resultados3 />
-  </Route>
-  <Route path="/encuesta4">
-    <Encuesta4 />
-  </Route>
-  <Route path="/encuesta5">
-    <Encuesta5 />
+  <Route path="/resultados/:nombre/:id" let:params>
+    <Resultados encuestaId="{params.id}" nombre='{params.nombre}'/>
   </Route>
 </Router>

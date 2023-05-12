@@ -5,9 +5,26 @@
   import Navbar from "../components/Navbar.svelte";
   import { user } from "../stores/Store";
 
+  let promiseEncuestas = []
+  let nombreEncuesta = "ex"
+
   onMount(() => {
     if(!user) navigate('/', {replace: true})
+    promiseEncuestas = getEncuestas()
   });
+
+  const getEncuestas = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        Accept: "*/*",
+      },
+    };
+    const res = await fetch("http://localhost:5050/encuesta/", options);
+    const json = await res.json();
+    return json;
+  };
+
 </script>
 
 <svelte:head>
@@ -29,56 +46,24 @@
     </div>
 
     <div class="cardBox" transition:fade>
-      <Link to="/encuesta1">
-        <div class="card">
-          <div>
-            <div class="numbers">1</div>
-            <div class="cardName">ENCUESTA SOBRE LAS HABILIDADES DE ESTUDIO</div>
-            <Link to="/resultados1" class="text-secondary">Resultado</Link>
-          </div>
-          <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
-        </div>
-      </Link>
-      <Link to="/encuesta2">
-        <div class="card">
-          <div>
-            <div class="numbers">2</div>
-            <div class="cardName">TEST DE ASERTIVIDAD</div>
-            <Link to="/resultados2" >Resultado</Link>
-          </div>
-          <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
-        </div>
-      </Link>
-      <Link to="/encuesta3">
-        <div class="card">
-          <div>
-            <div class="numbers">3</div>
-            <div class="cardName">INVENTARIO SOBRE CANALES DE APRENDIZAJE</div>
-            <Link class="link-primary" to="resultados3" replace>Resultado</Link>
-          </div>
-          <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
-        </div>
-      </Link>
-      <Link to="/encuesta4">
-        <div class="card">
-          <div>
-            <div class="numbers">4</div>
-            <div class="cardName">INVENTARIO SOBRE CANALES DE APRENDIZAJE</div>
-            <Link class="link-primary" to="resultados4" replace>Resultado</Link>
-          </div>
-          <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
-        </div>
-      </Link>
-      <Link to="/encuesta5">
-        <div class="card">
-          <div>
-            <div class="numbers">5</div>
-            <div class="cardName">INVENTARIO SOBRE CANALES DE APRENDIZAJE</div>
-            <Link class="link-primary" to="resultados4" replace>Resultado</Link>
-          </div>
-          <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
-        </div>
-      </Link>
+      {#await promiseEncuestas}
+        <p>...waiting</p>
+      {:then encuestas} 
+        {#each encuestas as encuesta}
+          <Link to={"/encuesta/"+encuesta.idEncuesta}>
+            <div class="card">
+              <div>
+                <div class="numbers">{encuesta.idEncuesta}</div>
+                <div class="cardName">{encuesta.Nombre}</div>
+                <Link to={"/resultados/"+encuesta.Nombre+"/"+encuesta.idEncuesta} class="text-secondary">Resultado</Link>
+              </div>
+              <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
+            </div>
+          </Link>
+        {/each}
+      {:catch error}
+        <p class="text-center text-danger">{error}</p>
+      {/await}
     </div>
   </div>
   <Navbar></Navbar>

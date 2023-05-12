@@ -6,10 +6,14 @@
   import { navigate } from "svelte-routing";
   import { user } from "../stores/Store";
 
+  export let encuestaId
+
   let promise = {};
   let secciones = [];
-  let respuestas = [[]];
-  let token = ""
+  let respuestas = [[],[],[]];
+  let horaInicio = new Date().getDate()
+  let horaFinal = null
+  let encuestaNombre = ""
 
   onMount(() => {
     if(!$user) navigate('/', {replace: true})
@@ -23,17 +27,20 @@
         Accept: "*/*",
       },
     };
-    const res = await fetch("http://localhost:5050/encuesta/3", options);
+    const res = await fetch("http://localhost:5050/encuesta/"+encuestaId, options);
     const json = await res.json();
+    encuestaNombre = json.Nombre;
     secciones = json.Secciones;
     return json;
   };
 
   const calificar = () => {
+    horaFinal = new Date().getDate()
+    console.log(respuestas)
     let res = respuestas[0].filter((i) => i != "");
-    console.log(token)
-    if (res.length >= 24) {
-      enviar(respuestas,$user.csrf, 3)
+    if (res.length >= 0) {
+      enviar(respuestas, $user.csrf, encuestaId, horaFinal, horaInicio)
+      navigate("/resultados/"+encuestaNombre+"/"+idEncuesta, {replace:true})
     } else {
       alert("Contesta todas las pregunas!");
     }
@@ -60,17 +67,17 @@
     {#await promise}
       <p>...waiting</p>
     {:then data}
-      <div class="d-flex justify-content-center text-muted">
-        <h1 class="text-center">{data.Nombre}</h1>
-      </div>
-      {#each secciones as seccion, s}
-        <div class="d-flex justify-content-start p-3 text-muted">
-          <h2>{seccion.Titulo}</h2>
-        </div>
+    <div class="d-flex justify-content-center text-muted">
+      <h1 class="text-center">{data.Nombre}</h1>
+    </div>
+    {#each secciones as seccion, s}
+    <div class="d-flex justify-content-start p-3 text-muted">
+      <h2>{seccion.Titulo}</h2>
+    </div>
 
         <div class="cardBox" transition:fade>
           {#each seccion.Preguntas as pregunta, i}
-            <div class="  card">
+            <div class="card">
               <label class="cardName">{pregunta.TituloPregunta}</label>
               <br />
               <div>
@@ -81,14 +88,11 @@
                     class="form-select form-select"
                     bind:value={respuestas[s][i]}
                   >
-                    <option value="" selected disabled hidden
-                      >Selecciona tu respuestas</option
+                    <option value="" selected disabled hidden>Selecciona tu respuestas</option
                     >
-                    <option value="1">Nunca</option>
-                    <option value="2">Raramente</option>
-                    <option value="3">Ocasionalmente</option>
-                    <option value="4">Usualmente</option>
-                    <option value="4">Siempre</option>
+                    {#each pregunta.TipoPregunta.DetTipoPreg as op, i}
+                      <option value={i}>{op.Opcion}</option>
+                    {/each}
                   </select>
                   <!-- <label  for="opcion-si-1">Sí</label> -->
                 </div>

@@ -5,7 +5,6 @@
 	import { user } from "../stores/Store";
 
     onMount(()=>{
-		console.log($user)
 		if(!$user) navigate('/', {replace: true})
     })
 
