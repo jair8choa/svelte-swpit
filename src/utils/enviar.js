@@ -1,5 +1,7 @@
 import { Router, Link, Route, navigate } from "svelte-routing";
 import { getCSRFToken } from "./cookies";
+import {URLAPI} from './utils.js'
+
 const enviar = (respuestas, csrf, id_encuesta, HoraFinal, HoraInicio) => {
   respuestas = respuestas.map((element) => {
     return element.filter((i) => i != "" && i != null);
@@ -10,7 +12,6 @@ const enviar = (respuestas, csrf, id_encuesta, HoraFinal, HoraInicio) => {
     HoraInicio,
     HoraFinal
   };
-
 
   const options = {
     method: "POST",
@@ -23,13 +24,13 @@ const enviar = (respuestas, csrf, id_encuesta, HoraFinal, HoraInicio) => {
   };
 
   // fetch("https://swpit-jwt-test-7cazqrq4mq-uc.a.run.app/encuesta/resultados", options)
-  fetch("http://localhost:5050/encuesta/resultados/"+id_encuesta, options)
+  fetch(URLAPI+"/encuesta/resultados/"+id_encuesta, options)
     .then((response) => response.text())
     .then((data) => {
-      navigate("/resultados"+id_encuesta, { replace: true });
+      return data
     })
     .catch((error) => {
-      navigate("/encuestas", { replace: true });
+      return error
     });
 };
 

@@ -2,10 +2,11 @@
   import { Router, Link, Route, navigate } from "svelte-routing";
   import { onMount } from "svelte";
   import { user } from "../stores/Store.js";
+  import {URLAPI} from '../utils/utils.js'
 
   const cerrarsesion = async () => {
     if (confirm("Deseas cerrar sesion "+$user.name+"?")) {
-      const response = await fetch('http://localhost:5050/auth/logout',  {method: 'POST', credentials:'include'})
+      const response = await fetch(URLAPI+'/auth/logout',  {method: 'POST', credentials:'include'})
       user.logout()
       navigate('/', {replace: false})
     }
@@ -36,7 +37,7 @@
   <ul>
     <li>
       <a href="#">
-        <span class="banner-img"> <img src="/svelte-swpit/imgs/halcon.png" alt="" /> </span>
+        <span class="banner-img"> <img src="/imgs/halcon.png" alt="" /> </span>
       </a>
     </li>
     <li name="Home">

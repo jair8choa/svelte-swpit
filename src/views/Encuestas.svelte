@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
   import Navbar from "../components/Navbar.svelte";
   import { user } from "../stores/Store";
+  import {URLAPI} from '../utils/utils.js'
 
   let promiseEncuestas = []
   let nombreEncuesta = "ex"
@@ -20,7 +21,7 @@
         Accept: "*/*",
       },
     };
-    const res = await fetch("http://localhost:5050/encuesta/", options);
+    const res = await fetch(URLAPI+"/encuesta/", options);
     const json = await res.json();
     return json;
   };
@@ -28,9 +29,8 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_home.css" />
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
-
+  <!-- <link rel="stylesheet" type="text/css" href="/css/style_home.css" /> -->
+  <link rel="stylesheet" type="text/css" href="/css/style_form.css" />
 </svelte:head>
 
 <div class="container">
@@ -41,7 +41,7 @@
       </div>
 
       <div class="user">
-        <img src="/svelte-swpit/imgs/login-icon.png" alt="" />
+        <img src="/imgs/login-icon.png" alt="" />
       </div>
     </div>
 

@@ -5,6 +5,7 @@
   import {enviar} from "../utils/enviar"
   import { navigate } from "svelte-routing";
   import { user } from "../stores/Store";
+  import {URLAPI} from '../utils/utils.js'
 
 
   let promise = {};
@@ -24,7 +25,7 @@
         Accept: "*/*",
       },
     };
-    const res = await fetch("http://localhost:5050/encuesta/1", options);
+    const res = await fetch(URLAPI+"/encuesta/1", options);
     const json = await res.json();
     secciones = json.Secciones
     return json;
@@ -41,8 +42,8 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" href="/svelte-swpit/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style_form.css" />
 </svelte:head>
 
   <div class="main">
@@ -52,7 +53,7 @@
       </div>
 
       <div class="user">
-        <img src="/svelte-swpit/imgs/login-icon.png" alt="" />
+        <img src="/imgs/login-icon.png" alt="" />
       </div>
     </div>
     <!-- cards -->

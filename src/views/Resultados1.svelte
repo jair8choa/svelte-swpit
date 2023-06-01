@@ -12,6 +12,7 @@
     ArcElement,
     CategoryScale,
   } from "chart.js";
+    import { URLAPI } from "../utils/utils";
 
   ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
 
@@ -27,7 +28,7 @@
     };
 
     const res = await fetch(
-      "http://localhost:5050/encuesta/resultados/1",
+      URLAPI+"/encuesta/resultados/1",
       options
     );
     const data = await res.json();
@@ -42,7 +43,6 @@
       resultadoseccion3,
     } = data;
 
-    console.log(data);
     if (res.ok) {
       resultado = resultadofinal
       return [
@@ -106,9 +106,9 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/encuestas.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style_form.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/encuestas.css" />
 </svelte:head>
 <div class="">
   <!-- main -->
@@ -119,7 +119,7 @@
       </div>
 
       <div class="user">
-        <img src="/svelte-swpit/imgs/login-icon.png" alt="" />
+        <img src="/imgs/login-icon.png" alt="" />
       </div>
     </div>
     <!-- cards -->

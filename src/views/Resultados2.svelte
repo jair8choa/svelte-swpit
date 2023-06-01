@@ -3,6 +3,7 @@
   import { Doughnut, Pie } from "svelte-chartjs";
   import Navbar from "../components/Navbar.svelte";
   import {navigate} from 'svelte-routing'
+  import {URLAPI} from '../utils/utils.js'
 
   import {
     Chart as ChartJS,
@@ -26,13 +27,12 @@
     };
 
     const res = await fetch(
-      "http://localhost:5050/encuesta/resultados/2",
+      URLAPI+"/encuesta/resultados/2",
       options
     );
     const data = await res.json();
 
     if (res.ok) {
-      console.log([data]);
       return [data];
     } else {
       if(res.status == 401)
@@ -48,9 +48,9 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/encuestas.css" />
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
-  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/encuestas.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style_form.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 </svelte:head>
 <div class="">
   <!-- main -->
@@ -61,7 +61,7 @@
       </div>
 
       <div class="user">
-        <img src="/svelte-swpit/imgs/login-icon.png" alt="" />
+        <img src="/imgs/login-icon.png" alt="" />
       </div>
     </div>
     <!-- cards -->

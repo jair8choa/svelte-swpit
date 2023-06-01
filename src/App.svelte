@@ -8,12 +8,14 @@
   import {onMount} from 'svelte'
   import { user } from "./stores/Store.js";
     import Resultados1 from "./views/Resultados1.svelte";
+    import {URLAPI} from './utils/utils'
+
   
   onMount(async()=>{
-      const response = await fetch('http://localhost:5050/auth/check', {method: 'GET', credentials: "include"})
+      const response = await fetch(URLAPI+'/auth/check', {method: 'GET', credentials: "include"})
       const status = await response.status
       const data = await response.json();
-      if(status == 200){
+      if(status === 200){
         user.login(data)
         navigate('/home', {replace: true})
       }else{

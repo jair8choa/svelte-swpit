@@ -2,6 +2,7 @@
     import { Router, Link, Route, navigate } from "svelte-routing";
     import {onMount} from 'svelte'
     import { user } from "../stores/Store.js";
+    import { URLAPI } from "../utils/utils.js";
     let username;
     let password;
 
@@ -21,7 +22,7 @@
         credentials: "include",
       };
 
-      const response = await fetch("http://localhost:5050/auth/login", options)
+      const response = await fetch(URLAPI+"/auth/login", options)
       const data = await response.json()
       const status = await response.status
       if(status == 200){
@@ -39,8 +40,8 @@
   <svelte:head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
     <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/svelte-swpit/css/style.css" />
-    <script defer src="/svelte-swpit/js/index.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/index.js"></script>
   </svelte:head>
   <header class="header">
     <nav class="nav">
@@ -68,7 +69,7 @@
     >
       <div class="d-flex justify-content-center">
         <img
-          src="/svelte-swpit/assets/login-icon.png"
+          src="/assets/login-icon.png"
           alt="login-icon"
           style="height: 7rem"
         />

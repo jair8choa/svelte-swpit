@@ -7,6 +7,7 @@
   import { user } from "../stores/Store";
   import {URLAPI} from '../utils/utils.js'
 
+
   export let encuestaId
 
   let promise = {};
@@ -48,7 +49,7 @@
 
     respuestas = respuestas.map((current1)=>{
       return current1.filter((current)=>{
-        return current !== ''
+        return current != ''
       })
     })
 
