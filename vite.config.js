@@ -5,4 +5,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 export default defineConfig({
   base: "https://jair8choa.github.io/swpit-svelte/",
   plugins: [svelte()],
+  server:{
+    host: '127.0.0.1'
+  }
 })
