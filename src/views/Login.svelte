@@ -7,7 +7,7 @@
     let password;
 
     onMount(()=>{
-      if($user) navigate('/home', {replace: true})
+      if($user) navigate('/svelte-swpit/home', {replace: true})
     })
 
     const login = async () => {
@@ -27,7 +27,7 @@
       const status = await response.status
       if(status == 200){
         user.login(data)
-        navigate('/home', {replace: true})
+        navigate('/svelte-swpit/home', {replace: true})
       }else{
         alert("Contraseña o Usuario Incorrecto")
         username = ""
@@ -50,13 +50,13 @@
       </button>
       <ul class="nav-menu">
         <li class="nav-menu-item">
-          <a href="/" class="nav-menu-link nav-link ">Alumnos</a>
+          <a href="/svelte-swpit/" class="nav-menu-link nav-link ">Alumnos</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/" class="nav-menu-link nav-link">Personal</a>
+          <a href="/svelte-swpit/" class="nav-menu-link nav-link">Personal</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/" class="nav-menu-link nav-link">Padres de Familia</a>
+          <a href="/svelte-swpit/" class="nav-menu-link nav-link">Padres de Familia</a>
         </li>
       </ul>
     </nav>

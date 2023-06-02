@@ -5,14 +5,14 @@
 	import { user } from "../stores/Store";
 
     onMount(()=>{
-		if(!$user) navigate('/', {replace: true})
+		if(!$user) navigate('/svelte-swpit', {replace: true})
     })
 
 </script>
 
 <svelte:head>
 	<!-- <link rel="stylesheet" type="text/css" href="/css/style_home.css" /> -->
-	<link rel="stylesheet" type="text/css" href="/css/style_form.css" />
+	<link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
 </svelte:head>
 
 <div class="container">
@@ -38,5 +38,5 @@
 			</div>
 		</div>
 	</div>
-	<Navbar></Navbar>
+	<Navbar/>
 </div>

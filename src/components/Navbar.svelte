@@ -8,11 +8,14 @@
     if (confirm("Deseas cerrar sesion "+$user.name+"?")) {
       const response = await fetch(URLAPI+'/auth/logout',  {method: 'POST', credentials:'include'})
       user.logout()
-      navigate('/', {replace: false})
+      navigate('/svelte-swpit/', {replace: true})
     }
   };
+  console.log('onMount')
 
   onMount(() => {
+
+
     document.querySelector(".toggle").onclick = function () {
       document.querySelector(".navigation-1").classList.toggle("active");
       document.querySelector(".main").classList.toggle("active");
@@ -41,19 +44,19 @@
       </a>
     </li>
     <li name="Home">
-      <Link to="/home" replace={true}>
+      <Link to="/svelte-swpit/home">
         <span class="icon"> <ion-icon name="home" /> </span>
         <span class="tittle">Inicio</span>
       </Link>
     </li>
     <li name="Encuestas">
-      <Link to="/encuestas" replace={true}>
+      <Link to="/svelte-swpit/encuestas">
         <span class="icon"> <ion-icon name="document-text" /> </span>
         <span class="tittle">Encuestas</span>
       </Link>
     </li>
     <li>
-      <a href="/" on:click={cerrarsesion}>
+      <a on:click={cerrarsesion}>
         <span class="icon"> <ion-icon name="log-out" /> </span>
         <span class="tittle">Cerrar Sesión</span>
       </a>

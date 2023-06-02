@@ -10,7 +10,7 @@
   let nombreEncuesta = "ex"
 
   onMount(() => {
-    if(!user) navigate('/', {replace: true})
+    if(!user) navigate('/svelte-swpit', {replace: true})
     promiseEncuestas = getEncuestas()
   });
 
@@ -30,7 +30,7 @@
 
 <svelte:head>
   <!-- <link rel="stylesheet" type="text/css" href="/css/style_home.css" /> -->
-  <link rel="stylesheet" type="text/css" href="/css/style_form.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
 </svelte:head>
 
 <div class="container">
@@ -50,12 +50,12 @@
         <p>...waiting</p>
       {:then encuestas} 
         {#each encuestas as encuesta}
-          <Link to={"/encuesta/"+encuesta.idEncuesta}>
+          <Link to={"/svelte-swpit/encuesta/"+encuesta.idEncuesta}>
             <div class="card">
               <div>
                 <div class="numbers">{encuesta.idEncuesta}</div>
                 <div class="cardName">{encuesta.Nombre}</div>
-                <Link to={"/resultados/"+encuesta.Nombre+"/"+encuesta.idEncuesta} class="text-secondary">Resultado</Link>
+                <Link to={"/svelte-swpit/resultados/"+encuesta.Nombre+"/"+encuesta.idEncuesta} class="text-secondary">Resultado</Link>
               </div>
               <div class="iconBx"><ion-icon name="accessibility-outline" /></div>
             </div>
@@ -66,5 +66,5 @@
       {/await}
     </div>
   </div>
-  <Navbar></Navbar>
+  <Navbar/>
 </div>

@@ -18,7 +18,7 @@
   let cantidadPreguntas = 0
 
   onMount(() => {
-    if(!$user) navigate('/', {replace: true})
+    if(!$user) navigate('/svelte-swpit', {replace: true})
     promise = getPreguntas();
   });
 
@@ -42,7 +42,7 @@
     return json;
   };
 
-  const calificar = () => {
+  const calificar = async () => {
 
     horaFinal = new Date().getTime()
 
@@ -57,8 +57,8 @@
     }, 0)
 
     if (cantidadPreguntas == cantidadRespuestas) {
-      enviar(respuestas, $user.csrf, encuestaId, horaFinal, horaInicio)
-      navigate("/resultados/"+encuestaNombre+"/"+encuestaId, {replace:true})
+      await enviar(respuestas, $user.csrf, encuestaId, horaFinal, horaInicio)
+      navigate("/svelte-swpit/resultados/"+encuestaNombre+"/"+encuestaId, {replace:true})
     } else {
       alert("Contesta todas las pregunas!");
     }
@@ -66,8 +66,8 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/style_form.css" />
+  <link rel="stylesheet" href="/svelte-swpit/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
 </svelte:head>
 
 <div class="main">

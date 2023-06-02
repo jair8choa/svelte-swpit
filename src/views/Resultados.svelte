@@ -31,15 +31,14 @@
   }
 
   onMount(() => {
-    console.log("onMount")
     promiseResultados = getResultados();
   });
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" type="text/css" href="/css/style_form.css" />
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="/css/encuestas.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/style_form.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/svelte-swpit/css/encuestas.css" />
 </svelte:head>
 <div class="">
   <!-- main -->
@@ -61,13 +60,13 @@
       {:then data}
       <h2 class="text-center">Dictamen</h2>
       <div class="cardBox">
-        <p class="fs-5"><b>Evaluacion Descriptiva:</b> {dictamen.EvalDescripctiva}</p> <br>
-        <p class="fs-5"><b>Evaluacion Numerica:</b> {dictamen.EvalNumerica}</p> <br>
-        <p class="fs-5"><b>Observaciones:</b> {dictamen.Observaciones}</p> <br>
-        <p class="fs-5"><b>Recomendaciones:</b> {dictamen.Recomendaciones}</p> <br>
-        <p class="fs-5"><b>Fecha Aplicacion:</b> {data.FechaAplicacion}</p> <br>
-        <p class="fs-5"><b>Hora Inicio:</b> {data.HoraInicio}</p> <br>
-        <p class="fs-5"><b>Hora Final:</b> {data.HoraFinal}</p> <br>
+        <p class="fs-6"><b>Evaluacion Descriptiva:</b> {dictamen.EvalDescripctiva}</p> <br>
+        <p class="fs-6"><b>Evaluacion Numerica:</b> {dictamen.EvalNumerica}</p> <br>
+        <p class="fs-6"><b>Observaciones:</b> {dictamen.Observaciones}</p> <br>
+        <p class="fs-6"><b>Recomendaciones:</b> {dictamen.Recomendaciones}</p> <br>
+        <p class="fs-6"><b>Fecha Aplicacion:</b> {data.FechaAplicacion}</p> <br>
+        <p class="fs-6"><b>Hora Inicio:</b> {data.HoraInicio}</p> <br>
+        <p class="fs-6"><b>Hora Final:</b> {data.HoraFinal}</p> <br>
       </div>
       <h2 class="text-center">Detalle</h2>
       <div class="cardBox">
@@ -84,7 +83,7 @@
       {/await}
     </div>
     <div class="d-flex justify-content-center">
-      <Link to={"/encuesta/"+encuestaId}>
+      <Link to={"/svelte-swpit/encuesta/"+encuestaId}>
         <button class=" centrar btn btn-outline-primary" type="submit" value="submit">Realizar Encuesta</button>
       </Link>
     </div>

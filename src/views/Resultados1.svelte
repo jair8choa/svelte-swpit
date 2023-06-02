@@ -142,7 +142,7 @@
       {/await}
     </div>
     <div class="d-flex justify-content-center">
-      <button class=" centrar btn btn-outline-primary" type="submit" value="submit" on:click={() => navigate("/encuesta1")}>Realizar Encuesta</button>
+      <button class=" centrar btn btn-outline-primary" type="submit" value="submit" on:click={() => navigate("/svelte-swpit/encuesta1")}>Realizar Encuesta</button>
     </div>
     <br>
   </div>
