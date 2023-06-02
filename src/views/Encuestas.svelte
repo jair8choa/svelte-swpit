@@ -41,7 +41,7 @@
       </div>
 
       <div class="user">
-        <img src="/imgs/login-icon.png" alt="" />
+        <img src="./svelte-swpit/imgs/login-icon.png" alt="" />
       </div>
     </div>
 

@@ -41,7 +41,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
     <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css" />
-    <script defer src="/js/index.js"></script>
+    <script defer src="./svelte-swpit/js/index.js"></script>
   </svelte:head>
   <header class="header">
     <nav class="nav">
@@ -69,7 +69,7 @@
     >
       <div class="d-flex justify-content-center">
         <img
-          src="/assets/login-icon.png"
+          src="./svelte-swpit/assets/login-icon.png"
           alt="login-icon"
           style="height: 7rem"
         />
