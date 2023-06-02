@@ -3,7 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/svelte-swpit/",
+  base: "https://github.com/jair8choa/svelte-swpit/",
   plugins: [svelte()],
   server:{
     host: '127.0.0.1'
