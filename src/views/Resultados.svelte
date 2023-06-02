@@ -58,16 +58,6 @@
       {#await promiseResultados}
         <p>...waiting</p>
       {:then data}
-      <h2 class="text-center">Dictamen</h2>
-      <div class="cardBox">
-        <p class="fs-6"><b>Evaluacion Descriptiva:</b> {dictamen.EvalDescripctiva}</p> <br>
-        <p class="fs-6"><b>Evaluacion Numerica:</b> {dictamen.EvalNumerica}</p> <br>
-        <p class="fs-6"><b>Observaciones:</b> {dictamen.Observaciones}</p> <br>
-        <p class="fs-6"><b>Recomendaciones:</b> {dictamen.Recomendaciones}</p> <br>
-        <p class="fs-6"><b>Fecha Aplicacion:</b> {data.FechaAplicacion}</p> <br>
-        <p class="fs-6"><b>Hora Inicio:</b> {data.HoraInicio}</p> <br>
-        <p class="fs-6"><b>Hora Final:</b> {data.HoraFinal}</p> <br>
-      </div>
       <h2 class="text-center">Detalle</h2>
       <div class="cardBox">
           {#each detalles as detalle}
@@ -78,8 +68,18 @@
             {/if}
           {/each}
         </div>
+        <h2 class="text-center">Dictamen</h2>
+        <div class="cardBox">
+          <p class="fs-6"><b>Evaluacion Descriptiva:</b> {dictamen.EvalDescripctiva}</p> <br>
+          <p class="fs-6"><b>Evaluacion Numerica:</b> {dictamen.EvalNumerica}</p> <br>
+          <p class="fs-6"><b>Observaciones:</b> {dictamen.Observaciones}</p> <br>
+          <p class="fs-6"><b>Recomendaciones:</b> {dictamen.Recomendaciones}</p> <br>
+          <p class="fs-6"><b>Fecha Aplicacion:</b> {data.FechaAplicacion}</p> <br>
+          <p class="fs-6"><b>Hora Inicio:</b> {data.HoraInicio}</p> <br>
+          <p class="fs-6"><b>Hora Final:</b> {data.HoraFinal}</p> <br>
+        </div>
         {:catch error}
-        <p class="text-center text-danger">Aun no realizado la encuesta</p>
+        <p class="text-center text-danger">Aun no has realizado la encuesta</p>
       {/await}
     </div>
     <div class="d-flex justify-content-center">
