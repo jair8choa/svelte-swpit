@@ -78,7 +78,7 @@
     </div>
 
     <div class="user">
-      <img src="./svelte-swpit/imgs/login-icon.png" alt="" />
+      <img src="/svelte-swpit/imgs/login-icon.png" alt="" />
     </div>
   </div>
   <!-- cards -->
