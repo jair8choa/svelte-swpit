@@ -37,7 +37,7 @@
   <ul>
     <li>
       <a href="#">
-        <span class="banner-img"> <img src="/svelte-swpit/imgs/halcon.png" alt="" /> </span>
+        <span class="banner-img"> <img src="imgs/halcon.png" alt="" /> </span>
       </a>
     </li>
     <li name="Home">
