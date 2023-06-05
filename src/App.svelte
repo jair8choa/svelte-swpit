@@ -43,4 +43,7 @@
   <Route path="/svelte-swpit/resultados/:nombre/:id" let:params>
     <Resultados encuestaId="{params.id}" nombre='{params.nombre}'/>
   </Route>
+  <Route>
+    <Login/>
+  </Route>
 </Router>
