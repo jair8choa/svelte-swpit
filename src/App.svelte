@@ -28,7 +28,7 @@
 </script>
 
 <Router>
-  <Route path="/svelte-swpit/">
+  <Route path="/svelte-swpit">
     <Login />
   </Route>
   <Route path="/svelte-swpit/home">
