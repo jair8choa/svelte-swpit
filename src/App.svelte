@@ -28,19 +28,19 @@
 </script>
 
 <Router>
-  <Route path="/">
+  <Route path="/svelte-swpit">
     <Login />
   </Route>
-  <Route path="/home">
+  <Route path="/svelte-swpit/home">
     <Home />
   </Route>
-  <Route path="/encuestas">
+  <Route path="/svelte-swpit/encuestas">
     <Encuestas />
   </Route>
-  <Route path="/encuesta/:id" let:params>
+  <Route path="/svelte-swpit/encuesta/:id" let:params>
     <Encuesta encuestaId="{params.id}" />
   </Route>
-  <Route path="/resultados/:nombre/:id" let:params>
+  <Route path="/svelte-swpit/resultados/:nombre/:id" let:params>
     <Resultados encuestaId="{params.id}" nombre='{params.nombre}'/>
   </Route>
 </Router>
