@@ -58,25 +58,25 @@
       {#await promiseResultados}
         <p>...waiting</p>
       {:then data}
-      <h2 class="text-center">Detalle</h2>
+      <h2 class="text-center">Detalles</h2>
       <div class="cardBox">
           {#each detalles as detalle}
             {#if detalle != null}
               {#each Object.entries(detalle) as [key, value], index (key)}
-              <p><b>{key.replace(/([a-z])([A-Z])/g, '$1 $2')}:</b> {value}</p> <br>
+              <p class="fs-5"><b>{key.replace(/([a-z])([A-Z])/g, '$1 $2')}:</b> {value}</p> <br>
               {/each}
             {/if}
           {/each}
         </div>
         <h2 class="text-center">Dictamen</h2>
         <div class="cardBox">
-          <p class="fs-6"><b>Evaluacion Descriptiva:</b> {dictamen.EvalDescripctiva}</p> <br>
-          <p class="fs-6"><b>Evaluacion Numerica:</b> {dictamen.EvalNumerica}</p> <br>
-          <p class="fs-6"><b>Observaciones:</b> {dictamen.Observaciones}</p> <br>
-          <p class="fs-6"><b>Recomendaciones:</b> {dictamen.Recomendaciones}</p> <br>
-          <p class="fs-6"><b>Fecha Aplicacion:</b> {data.FechaAplicacion}</p> <br>
-          <p class="fs-6"><b>Hora Inicio:</b> {data.HoraInicio}</p> <br>
-          <p class="fs-6"><b>Hora Final:</b> {data.HoraFinal}</p> <br>
+          <p class="fs-5"><b>Evaluacion Descriptiva:</b> {dictamen.EvalDescripctiva}</p> <br>
+          <p class="fs-5"><b>Evaluacion Numerica:</b> {dictamen.EvalNumerica}</p> <br>
+          <p class="fs-5"><b>Observaciones:</b> {dictamen.Observaciones}</p> <br>
+          <p class="fs-5"><b>Recomendaciones:</b> {dictamen.Recomendaciones}</p> <br>
+          <p class="fs-5"><b>Fecha Aplicacion:</b> {data.FechaAplicacion}</p> <br>
+          <p class="fs-5"><b>Hora Inicio:</b> {data.HoraInicio}</p> <br>
+          <p class="fs-5"><b>Hora Final:</b> {data.HoraFinal}</p> <br>
         </div>
         {:catch error}
         <p class="text-center text-danger">Aun no has realizado la encuesta</p>
