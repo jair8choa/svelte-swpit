@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
   import Navbar from "../components/Navbar.svelte";
   import { enviar } from "../utils/enviar";
-  import { navigate } from "svelte-routing";
+  import { navigate, Link } from "svelte-routing";
   import { user } from "../stores/Store";
   import {URLAPI} from '../utils/utils.js'
 
@@ -113,6 +113,12 @@
       {/each}
       <div class="d-flex justify-content-center">
         <button class="centrar  centrar btn btn-outline-primary" type="submit" value="submit" on:click={calificar}>Enviar</button>
+      </div>
+      <br>
+      <div class="d-flex justify-content-center">
+        <Link to="/svelte-swpit/encuestas">
+          <button class=" centrar btn btn-link" type="submit" value="submit">Regresar</button>
+        </Link>
       </div>
       <br>
     {:catch error}
