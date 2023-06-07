@@ -33,7 +33,6 @@
 </script>
 <svelte:head />
 
-<Router>
   <nav class="navigation-1">
     <ul>
       <li>
@@ -61,4 +60,3 @@
       </li>
     </ul>
   </nav>
-</Router>
