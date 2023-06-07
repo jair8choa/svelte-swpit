@@ -88,6 +88,12 @@
       </Link>
     </div>
     <br>
+    <div class="d-flex justify-content-center">
+      <Link to="/svelte-swpit/encuestas">
+        <button class=" centrar btn btn-link" type="submit" value="submit">Regresar</button>
+      </Link>
+    </div>
+    <br>
   </div>
   <Navbar />
 </div>

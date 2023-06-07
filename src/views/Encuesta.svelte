@@ -96,7 +96,7 @@
             {#each seccion.Preguntas as pregunta, i}
 
                 <div class="card">
-                  <label class="cardName">{pregunta.TituloPregunta}</label>
+                  <p class="cardName">{pregunta.TituloPregunta}</p>
                   <br />
                   <fieldset>
                     {#each pregunta.TipoPregunta.DetTipoPreg as op, j }
