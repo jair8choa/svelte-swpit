@@ -56,7 +56,7 @@
           <a href="/svelte-swpit/" class="nav-menu-link nav-link">Personal</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/svelte-swpit/" class="nav-menu-link nav-link">Padres de Familia</a>
+          <a href="/svelte-swpit/" class="nav-menu-link nav-link">Padres</a>
         </li>
       </ul>
     </nav>
